@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mad Libs Machine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f9f9f9;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    #output {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Mad Libs: Describe Your Machine</h2>
+
+<form id="madLibForm">
+  <label>Machine User Name:</label>
+  <input type="text" id="machineCode">
+
+  <label>Purpose:</label>
+  <input type="text" id="purpose">
+
+  <label>Project Type 1:</label>
+  <input type="text" id="project1">
+
+  <label>Project Type 2:</label>
+  <input type="text" id="project2">
+
+  <label>Processor:</label>
+  <input type="text" id="processor">
+
+  <label>Memory Size:</label>
+  <input type="text" id="memory">
+
+  <label>Current Work Environment/Platform/iOS:</label>
+  <input type="text" id="environment">
+
+  <label>Last Shutdown:</label>
+  <input type="text" id="lastShutdown">
+
+  <label>Adjective (Powerful, Lazy, Depressed, Excited...):</label>
+  <input type="text" id="adjective1">
+
+  <label>Adjective (Companion, Workmate, Taskmaster...):</label>
+  <input type="text" id="adjective2">
+
+  <button type="button" onclick="generateMadLib()">Generate Description</button>
+</form>
+
+<div id="output"></div>
+
+<script>
+  function generateMadLib() {
+    const machineCode = document.getElementById("machineCode").value;
+    const purpose = document.getElementById("purpose").value;
+    const project1 = document.getElementById("project1").value;
+    const project2 = document.getElementById("project2").value;
+    const processor = document.getElementById("processor").value;
+    const memory = document.getElementById("memory").value;
+    const environment = document.getElementById("environment").value;
+    const lastShutdown = document.getElementById("lastShutdown").value;
+    const adjective1 = document.getElementById("adjective1").value;
+    const adjective2 = document.getElementById("adjective2").value;
+
+    const result = `
+      <p><strong>${machineCode}</strong> is a machine for <strong>${purpose}</strong>. 
+      Projects range from <strong>${project1}</strong> to <strong>${project2}</strong>. 
+      My <strong>${processor}</strong> can hold <strong>${memory}</strong> of memory and is currently enjoying 
+      <strong>${environment}</strong>. While I often rest, the last time I was turned off was 
+      <strong>${lastShutdown}</strong>. I’m a <strong>${adjective1}</strong> tool and a 
+      <strong>${adjective2}</strong> companion.</p>
+    `;
+
+    document.getElementById("output").innerHTML = result;
+  }
+</script>
+
+</body>
+</html>
