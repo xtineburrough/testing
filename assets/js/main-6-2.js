@@ -1,7 +1,6 @@
 // main.js
-
-console.log("Hello, World!");
-document.body.style.transform = `rotate(90deg)`;
+//6.2.3 Step 2
+//document.body.style.transform = `rotate(90deg)`;
 
 // Rotate the body 90 degrees
 let rotation = 0;
