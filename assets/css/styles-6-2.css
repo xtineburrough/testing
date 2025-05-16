@@ -1,6 +1,6 @@
 html {
-width: 100%;
-height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -9,16 +9,19 @@ body {
     color: whitesmoke;
     font-size: 5rem;
     overflow: hidden;
-   background: url("../img/flames.gif") no-repeat center/cover;
+    background: url("../img/flames.gif") no-repeat center/cover;
+    transition-property: transform;
+    transition-duration: 3s;
+}
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin: 15% 4rem 0 4rem;
 }
-.grid-container { 
-display:grid; 
-grid-template-columns: 1fr 1fr 1fr;
-gap: 2rem;
-grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-margin: 15% 4rem 0 4rem;
-}
+
 .last {
     padding-bottom: 2rem;
     border-bottom: 2px solid rgb(220, 200, 180);
