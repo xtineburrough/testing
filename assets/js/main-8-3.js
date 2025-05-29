@@ -32,13 +32,13 @@ function generate() {
         let x = randomInt(centerX - offsetX, centerX + offsetX) - (w * .5);
         let y = randomInt(centerY - offsetY, centerY + offsetY) - (h * .5);
 
-        let style = `
-position: absolute;
-transform: translate(${x}px,${y}px) rotate(${randomInt(-1, 1)}deg);
-width: ${w}px;
-height: ${h}px;
-background-color: ${randomHex()};
-`;
+//         let style = `
+// position: absolute;
+// transform: translate(${x}px,${y}px) rotate(${randomInt(-1, 1)}deg);
+// width: ${w}px;
+// height: ${h}px;
+// background-color: ${randomHex()};
+// `;
         //output += `<div style="${style}"></div>`;
 
         let min = .75;
